@@ -2,6 +2,7 @@ import random
 
 puntos_jugador1 = 0
 puntos_maquina = 0
+deuce = False
 
 nombre_jugador = input("Escriba el nombre del jugador 1: ")
 
@@ -30,12 +31,16 @@ while True:
     else:
         puntos_maquina += 1
 
-    if puntos_jugador1 >= 4 and puntos_jugador1 >= puntos_maquina + 2:
+    if puntos_jugador1 > 3:
         print(nombre_jugador + " Gana el juego")
         break
-    elif puntos_maquina >= 4 and puntos_maquina >= puntos_jugador1 + 2:
+    elif puntos_maquina > 3:
         print(nom_jugador2 + " ganó el juego")
         break
+    elif puntos_maquina == puntos_jugador1:
+        deuce = True
+
+
 
     puntaje_juga1 = ""
     puntaje_maqui = ""
@@ -59,5 +64,7 @@ while True:
         puntaje_maqui = "40"
 
     print("Puntuación:")
-    print(nombre_jugador + ": ", puntaje_juga1)
-    print(nom_jugador2 + ": ", puntaje_maqui)
+    if deuce == False:
+        print(nombre_jugador + ": ", puntaje_juga1)
+        print(nom_jugador2 + ": ", puntaje_maqui)
+
