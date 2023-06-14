@@ -7,23 +7,22 @@ puntaje_juga1_deuce = 0
 puntaje_maqui_deuce = 0
 go = 0
 
-nombre_jugador = input("Escriba el nombre del jugador 1: ")
 
-print("--Menú Principal--")
-print("1. Jugar contra la maquina")
-print("2. La máquina juegue sola")
-opcion = input("Seleccione una opción: ")
+print("\n---- Menú Principal ----")
+print("\n1. Jugar contra otro jugador")
+print("\n2. La máquina juegue contra la máquina")
+opcion = input("\nSeleccione una opción: ")
 
 if opcion == "1":
-    nom_jugador2 = "Máquina"
+    nombre_jugador = input("\nEscriba el nombre del jugador 1: ")
+    nom_jugador2 = input("\nEscriba el nombre del jugador 2: ")
 else:
+    nombre_jugador = "La Máquina"
     nom_jugador2 = "Máquina"
 
 while True:
     if opcion == "1":
-        print()
-        input("Presione la tecla ENTER para tirar la pelota ")
-        print()
+        input("\nPresione la tecla ENTER para tirar la pelota \n")
     else:
         print()
 
